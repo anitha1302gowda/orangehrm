@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+
+<listeners>
+<listener class-name="com.qa.utility.Reporting"></listener>
+</listeners>
+  <test  name="Test">
+  </test> <!-- Test -->
+    <test name="Test_01" >
+  		<parameter name="OrangeHrmURL" value="https://opensource-demo.orangehrmlive.com/"></parameter>
+		<parameter name="BrowserURL" value="D:\\Automation\\chromedriver_win32 (2)\\chromedriver.exe"></parameter>
+		
+			<parameter name="Browser" value="Chrome"></parameter>
+			  		<parameter name="userName" value="Admin"></parameter>
+			  		  		<parameter name="password" value="admin123"></parameter>
+    <classes>
+    
+        <class name="com.qa.testScript.TC_Orange_Hrm_Recruitment_Candidate_Delete"/>
+     <class name="com.qa.testScript.TC_OrangeHrm_Recruitment_Search"/>
+ <class name="com.qa.testScript.TC_OrangeHrm_Recruitment_Add_Customer"/>
+    </classes>
+  </test> <!-- Test_01 -->
+</suite> <!-- Suite -->

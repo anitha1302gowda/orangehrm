@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.utility.Reporting"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Test_01(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="OrangeHrmURL" value="https://opensource-demo.orangehrmlive.com/"/>
+    <parameter name="BrowserURL" value="D:\\Automation\\chromedriver_win32 (2)\\chromedriver.exe"/>
+    <parameter name="userName" value="Admin"/>
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="com.qa.testScript.TC_OrangeHrm_Recruitment_Add_Customer">
+        <methods>
+          <include name="add_Customer"/>
+          <include name="edit_customer"/>
+          <include name="TearDown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScript.TC_OrangeHrm_Recruitment_Add_Customer -->
+      <class name="com.qa.testScript.TC_Orange_Hrm_Recruitment_Candidate_Delete">
+        <methods>
+          <include name="deleteCustomers"/>
+          <include name="TearDown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScript.TC_Orange_Hrm_Recruitment_Candidate_Delete -->
+      <class name="com.qa.testScript.TC_OrangeHrm_Recruitment_Search">
+        <methods>
+          <include name="status_Search"/>
+          <include name="vacency_Search"/>
+          <include name="candidateName_Search"/>
+          <include name="hiringManager_Search"/>
+          <include name="modeOfApp_Search"/>
+          <include name="TearDown"/>
+          <include name="jobTitle_Search"/>
+          <include name="testDate"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.testScript.TC_OrangeHrm_Recruitment_Search -->
+    </classes>
+  </test> <!-- Test_01(failed) -->
+</suite> <!-- Failed suite [Suite] -->
