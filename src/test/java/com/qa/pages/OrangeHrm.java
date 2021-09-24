@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class OrangeHrm {
-	
+	String x="vvv";
 	WebDriver driver;
 	@FindBy(xpath = "//*[@id=\"txtUsername\"]")
 	@CacheLookup
